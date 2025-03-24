@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGRT-portfolio-website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h2>RGRT</h2>
+            </div>
+            <button class="hamburger" id="hamburger">
+                &#9776;  <!-- Unicode for the hamburger icon -->
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <!-- Home Section -->
+    <section id="home" class="home-section">
+        <div class="home-content">
+            <h1>Hi, I'm rgrt</h1>
+            <p>Passionate DevOps Engineer focusing on automation, cloud infrastructure, and continuous integration.</p>
+        </div>
+    </section>
+    
+    <!-- Skill Section -->
+    <section id="skills" class="skills-section">
+        <div class="section-title">
+            <h2>My Skills</h2>
+            <p>Technologies I work with:</p>
+        </div>
+        <div class="skills-container">
+            <div class="skill-card">
+                <i class="fab fa-aws"></i>
+                <h3>AWS</h3>
+                <div class="skill-info">
+                    <p>Scalable cloud computing platform for deploying and managing infrastructure.</p>
+                </div>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-docker"></i>
+                <h3>Docker</h3>
+                <div class="skill-info">
+                    <p>Containerization platform to streamline development and deployment.</p>
+                </div>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-ansible"></i>
+                <h3>Ansible</h3>
+                <div class="skill-info">
+                    <p>Automation tool for IT processes like configuration management.</p>
+                </div>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-jenkins"></i>
+                <h3>Jenkins</h3>
+                <div class="skill-info">
+                    <p>CI/CD tool that automates software development pipelines.</p>
+                </div>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-terraform"></i>
+                <h3>Terraform</h3>
+                <div class="skill-info">
+                    <p>Infrastructure as Code tool for automating cloud resource provisioning.</p>
+                </div>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-kubernetes"></i>
+                <h3>Kubernetes</h3>
+                <div class="skill-info">
+                    <p>Orchestration system for automating deployment and scaling of containers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="section-title">
+            <h2>My Projects</h2>
+            <p>Some of the DevOps projects I've worked on:</p>
+        </div>
+        <div class="portfolio-container">
+            <div class="project">
+                <h3>Project 1</h3>
+                <p>A DevOps pipeline for automated deployments using Jenkins and Docker.</p>
+            </div>
+            <div class="project">
+                <h3>Project 2</h3>
+                <p>Infrastructure as Code with Terraform for provisioning AWS resources.</p>
+            </div>
+            <div class="project">
+                <h3>Project 3</h3>
+                <p>Cloud automation using AWS Lambda and Ansible for infrastructure management.</p>
+            </div>
+        </div>
+    </section>
+
+          <!-- Blog Section - Blog Landing Page -->
+    <section id="blog" class="blog-section">
+        <div class="section-title">
+            <h2>Blogs</h2>
+            <p>Sharing my knowledge about DevOps, Cloud, and Automation.</p>
+        </div>
+        <div class="blog-posts">
+            <div class="blog-post">
+                <h3><a href="blog/blog-post1.html">Understanding Continuous Integration and Continuous Deployment (CI/CD)</a></h3>
+                
+                <p>A deep dive into the CI/CD pipeline and its importance in modern DevOps practices.</p>
+            </div>
+            <div class="blog-post">
+                <h3><a href="blog/blog-post2.html">Getting Started with Terraform: Provisioning AWS Resources</a></h3>
+                
+                <p>A comprehensive guide to using Terraform for provisioning AWS resources and managing infrastructure as code.</p>
+            </div>
+        
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-title">
+            <h2>Contact</h2>
+            <p>Feel free to reach out for collaboration or job opportunities!</p>
+        </div>
+        <form id="contact-form">
+            <input type="text" placeholder="Name" required />
+            <input type="email" placeholder="Email" required />
+            <textarea placeholder="Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
