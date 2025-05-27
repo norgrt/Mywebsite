@@ -21,9 +21,9 @@ jobs:
 
     - name: Build and Push Docker Image
       run: |
-        docker build -t yourusername/node-static-site .
-        docker tag yourusername/node-static-site yourusername/node-static-site:latest
-        docker push yourusername/node-static-site:latest
+        docker build -t ignus07/myportfolio .
+        docker tag ignus07/myportfolio ignus07/myportfolio:latest
+        docker push ignus07/myportfolio:latest
 
     - name: SSH into EC2 and Deploy
       uses: appleboy/ssh-action@v1.0.0
