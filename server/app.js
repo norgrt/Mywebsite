@@ -6,7 +6,7 @@ const port = process.env.PORT || 3000;
 // Serve static assets from public directory
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
-// Fallback for index.html on root
+// Fallback for index.html on root.
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
 });
