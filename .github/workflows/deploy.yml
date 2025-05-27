@@ -22,24 +22,17 @@ jobs:
     - name: Build and Push Docker Image
       run: |
         docker build -t ignus07/myportfolio .
-        docker tag ignus07/myportfolio ignus07/myportfolio:latest
         docker push ignus07/myportfolio:latest
 
     - name: SSH into EC2 and Deploy
       uses: appleboy/ssh-action@v1.0.0
       with:
-        host: ${{ secrets.54.86.124.34 }}
-        username: ${{ secrets.ubuntu }}
-        key: ${{ secrets.-----BEGIN OPENSSH PRIVATE KEY-----
-b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtz
-c2gtZWQyNTUxOQAAACAzE88n0k+AWAbxcaHUitoz8fqHIopfFefxgym5PFGcVgAA
-AIjM2IC5zNiAuQAAAAtzc2gtZWQyNTUxOQAAACAzE88n0k+AWAbxcaHUitoz8fqH
-IopfFefxgym5PFGcVgAAAEAwUQIBATAFBgMrZXAEIgQgQ3osfgxhmtrwrMV3rCo8
-AjMTzyfST4BYBvFxodSK2jPx+ociil8V5/GDKbk8UZxWAAAAAAECAwQF
------END OPENSSH PRIVATE KEY----- }}
+        host: ${{ secrets.EC2_HOST }}
+        username: ${{ secrets.EC2_USER }}
+        key: ${{ secrets.EC2_SSH_KEY }}
         script: |
           docker pull ignus07/myportfolio:latest
           docker stop myportfolio || true
           docker rm myportfolio || true
-          docker run -d -p 80:3000 --name myportfolio  ignus07/myportfolio:latest
+          docker run -d -p 80:3000 --name myportfolio ignus07/myportfolio:latest
 
