@@ -21,7 +21,7 @@ jobs:
 
     - name: Build and Push Docker Image
       run: |
-        docker build -t ignus07/myportfolio .
+        docker build -t ignus07/myportfolio:latest .
         docker push ignus07/myportfolio:latest
 
     - name: SSH into EC2 and Deploy
